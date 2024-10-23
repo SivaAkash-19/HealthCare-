@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Ambulance</title>
+  <link rel="stylesheet" href="ambulance.css">
+</head>
+<body>
+    <div class="ambulance-container">
+  <h1>Reserve Ambulance</h1>
+  <form id="reserve-form">
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required>
+    <br>
+    <label for="location">Your Location:</label>
+    <textarea id="location" name="location" rows="4" required></textarea>
+    <br>
+    <label for="description">Brief Description (Optional):</label>
+    <textarea id="description" name="description" rows="4"></textarea>
+    <br>
+    <button type="submit">Reserve Ambulance</button>
+  </form>
+  
+</div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

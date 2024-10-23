@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Doctor Appointment</title>
+    <link rel="stylesheet" href="remotedoctor.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Remote Doctor Appointment</h1>
+        </header>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="doctorName">Doctor's Name:</label>
+                <input type="text" id="doctorName" name="doctorName" value="Dr. John Doe" readonly>
+            </div>
+            <div class="form-group">
+                <label for="appointmentCharge">Appointment Charge:</label>
+                <input type="text" id="appointmentCharge" name="appointmentCharge" value="2000Lkr per appointment" readonly>
+            </div>
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp Number:</label>
+                <input type="text" id="whatsapp" name="whatsapp" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Appointment Time:</label>
+                <input type="time" id="appointmentTime" name="appointmentTime" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentProof">Payment Proof:</label>
+                <input type="file" id="paymentProof" name="paymentProof">
+            </div>
+            <div class="form-group">
+                <label for="cardDetails">Card Payment:</label>
+                <input type="text" id="cardDetails" name="cardDetails" placeholder="Card Number">
+            </div>
+            <button type="button" onclick="makeAppointment()">Make Appointment</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="remotedoctor.js"></script>
+</body>
+</html>

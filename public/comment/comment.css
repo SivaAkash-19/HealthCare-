@@ -1,0 +1,60 @@
+
+body{
+    background-color: gainsboro;
+}
+.logo img{
+    width: 13%;
+    height: 10%;
+}
+.comment-box{
+    width: 45%;
+    border: 1px solid;
+    margin: 50px 0;
+    background: linear-gradient(to right, #000000, #434343);
+    padding: 10px 20px;
+    font-family:'poppins',sans-serif;
+    border-radius: 5px;
+    margin-left :25%;
+    margin-top: 80px;
+    box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
+    margin-top: -2%;
+}
+.comment-box p{
+    text-align: left;
+    font-size: 28px;
+    color: #777;
+
+}
+.comment-form input, .comment-form textarea{
+    width:100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    border:1px solid #ddd;
+    color: #777;
+
+}
+.comment-form button{
+    margin:10px 0;
+    border:none;
+    background-color: #d0d0d0;
+    padding:10px;
+    font-size:18px ;
+    border-radius: 3px;
+    color: #444;
+
+}
+button:hover{
+    color:white;
+    background-color: #444;
+
+}
+@media(max-width:900px){
+    .comment-box{
+        width:80% ;
+        margin: 5%;
+    }
+}

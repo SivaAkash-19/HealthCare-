@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmergiCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+<body>
+    <div class="contact-wrapper">
+        <div class="contact-section">
+            
+            <form action="/submit-form" method="post">
+                <div class="label-name">
+                    <label for="name" class="form-name">Name</label>                   
+                </div>                                   
+                <input type="text" id="name" name="name">                              
+
+                <div class="wrapper">
+                    <label for="email" class="form-email">Email</label>                    
+                    <input type="email" id="email" name="email">
+                    <label for="number" class="form-phonenumber">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number">
+                </div>
+                <div class="label-name">
+                    <label for="message" class="form-message">Message</label>
+                </div>                
+                <textarea id="message" rows="7" name="message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            
+        </div>
+        <div class="contact-info">
+            <div class="contact-us"><h1>Contact <span>Us</span></h1>
+                  
+            </div>
+            <div class="contact-paragraph">
+                <p>For questions, technical assistance,<br>
+                    or collaboration opportunities via the contact<br>
+                    information provided.</p>
+            </div>
+            
+            <div class="contact-method">
+                <p><i class="fas fa-phone-alt"></i> +123-456-7890</p>                
+                <p><i class="fas fa-envelope"></i> hello@reallygreatsite.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Anywhere St., Any City, ST 12345</p>
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>

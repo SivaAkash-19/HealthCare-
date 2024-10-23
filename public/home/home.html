@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <script src="https://kit.fontawesome.com/dda833109b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="interfacestyle.css"> 
+  <style>
+    
+  </style>
+</head>
+<body  >
+
+  <div class="logo-m">
+    <img src="../coverimg/logo.png" alt="Logo">
+    <div class="searchbox">
+        <input type="text" id="search-box" placeholder="Search here...">
+        <button class="search-btn"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+    <div class="wrapper">
+        <ul>
+          <li><div class="icon"><div class="tooltip"><a href="../notification/notification.html">Notification</a></div><span><i class="fa-solid fa-bell"></i></span></a></div></li>
+          <li><div class="icon"><div class="tooltip"><a href="../setting/Setting.html">Setting</a></div><span><i class="fa-solid fa-gear"></i></span></div></li>
+          <li><div class="icon"><div class="tooltip"><a href="../services/Services.html">Services</a></div><span><i class="fa-brands fa-servicestack"></i></span><a href="#"></a></div></li>
+          <li><div class="icon"><div class="tooltip"><a href="../contact/contact.html">Contact Us</a></div> <span><i class="fa-solid fa-circle-half-stroke"></i></span><a href="#"></a></div></li>
+          <li><div class="icon"><div class="tooltip"><a href= "../soon/soon.html">More</a></div><span><i class="fa-solid fa-angles-right"></i></span><a href="#"></a></div></li>
+          
+     <div class="nav-b">
+          <li><div class="icon"><div class="tooltip"><a href="../comment/comment.html">Comment</a></div> <span><i class="fa-solid fa-comment-medical"></i></span><a href="#"></a></div></li>
+          <li><div class="icon"><div class="tooltip"><a href="../cutomercare/chat.html">Customer care</a></div><span><i class="fa-solid fa-hands-holding-child"></i></span><a href="#"></a></div></li>
+          <li><div class="icon"><div class="tooltip">+0960001232</div> <span><i class="fa-solid fa-phone"></i></span><a href="#"></a></div></li>
+        </ul>
+    </div>
+
+  <div class="container-m"> 
+    <div class="card-m" id="pharmarcy">
+    <div class="img-m">
+     <img src="pharmacy.jpg"></img>
+    </div>
+        <h3>Emergi Pharmacy</h3>
+        </div>
+  </div> 
+
+
+
+
+ <div class="container">
+    <div class="card-u" id="ambulance">
+      <div class="Ambulance-u">
+        <img src="ambulance.jpg"></img>
+      </div>
+        <h4>Ambulance</h4>
+     
+    </div>
+    
+    <div class="card-u">
+      <div class="delivery-u" id="delivery">
+        <img src="delivery.jpg"></img>
+      </div>
+       <h4>Medicine delivery</h4>
+    </div>
+    
+    <div class="card-u">
+      <div class="emergidoctor-u" id="emergidoctor">
+        <img src="emergidoctor.jpg"></img>
+      </div>
+        <h4>Emergi Doctor</h4>
+    </div>
+ </div> 
+
+ 
+ <div class="container-d">
+    <div class="card-d" id="appointment">
+      <div class="Appointment-d">
+        <img src="appointment.jpg"></img>
+        <h4>Appointment</h4>
+      </div>
+    </div>
+    
+     <div class="card-d">
+      <div class="Remotedoctor-d" id="remotedoctor">
+        <img src="remotedoctor.jpg"></img>
+        <h4>Remote Doctor</h4>
+      </div>
+    </div>
+    
+    <div class="card-d">
+      <div class="Symtoms-d" id="symtoms">
+        <img src="symtoms.jpg"></img>
+        <h4> Symtoms</h4>
+      </div>
+    </div>
+ </div> 
+ 
+ <script>
+    document.getElementById('ambulance').addEventListener('click', function() {
+            window.location.href = '../ambulance/ambulance.html';
+        });
+
+        document.getElementById('delivery').addEventListener('click', function() {
+            window.location.href = '../delivery/delivery.html';
+        });
+
+        document.getElementById('emergidoctor').addEventListener('click', function() {
+            window.location.href = '../emergidoctor/emergidoctor.html';
+        });
+
+        document.getElementById('appointment').addEventListener('click', function() {
+            window.location.href = '../appointment/appointment.html';
+        });
+
+        document.getElementById('remotedoctor').addEventListener('click', function() {
+            window.location.href = '../remotedoctor/remotedoctor.html';
+        });
+
+        document.getElementById('symtoms').addEventListener('click', function() {
+            window.location.href = '../symtoms/symtoms.html';
+        });
+
+        document.getElementById('pharmarcy').addEventListener('click', function() {
+            window.location.href = '../pharmarcy/pharmarcy.html';
+        });
+
+        document.getElementById('search-box').addEventListener('focus', function() {
+    this.parentElement.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+});
+
+document.getElementById('search-box').addEventListener('blur', function() {
+    this.parentElement.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+});
+
+window.addEventListener('resize', function() {
+    var searchBox = document.querySelector('.searchbox');
+    if (window.innerWidth < 768) {
+        searchBox.style.right = '10px';
+    } else {
+        searchBox.style.right = '0';
+    }
+});
+ </script>
+  
+</body>
+</html>

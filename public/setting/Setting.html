@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>Setting</h1>
+    
+      <div>
+        <label for="togg-1" class="togg-label">
+            <span>Dark Mode</span>
+            <input type="checkbox" id="togg-1">
+            <div class="toggle-container">
+                <span class="toggle"></span>
+                <span class="toggle-c"></span>
+            </div>
+        </label>
+      </div>
+      <div>
+        <label for="togg-2"class="togg-label">
+            <span>Desktop notification</span>
+            <input type="checkbox" id="togg-2">
+            <div class="toggle-container">
+                <span class="toggle"></span>
+                <span class="toggle-c"></span>
+            </div>
+        </label>
+      </div>
+      <div>
+        <label for="togg-3" class="togg-label">
+            <span>focused Inbox </span>
+            <input type="checkbox" id="togg-3">
+            <div class="toggle-container">
+                <span class="toggle"></span>
+                <span class="toggle-c"></span>
+            </div>
+        </label>
+      </div>
+    </div>
+    <div>
+        <div>
+            <h3>conservation view</h3>
+        </div>
+        <div>
+            <label for="radio1" class="flex">
+                <input type="radio" name="filter" id="radio1">
+                <span>newest on top</span>
+            </label>
+        </div>
+        <div>
+            <label for="radio2" class="flex">
+                <input type="radio" name="filter" id="radio2">
+                <span>newest on bottom</span>
+            </label>
+        </div>
+        <div>
+            <label for="radio3" class="flex">
+                <input type="radio" name="filter" id="radio3">
+                <span>Off</span>
+            </label>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h3>Reading Pannel</h3>
+        </div>
+        <div>
+            <label for="radio4" class="flex">
+                <input type="radio" name="Show-Mode" id="radio4">
+                <span>Show On The Right</span>
+            </label>
+        </div>
+        <div>
+            <label for="radio5" class="flex">
+                <input type="radio" name="Show-Mode" id="radio5">
+                <span>Show On The left</span>
+            </label>
+        </div>
+        <div>
+            <label for="radio6" class="flex">
+                <input type="radio" name="Show-Mode" id="radio6">
+                <span>Off</span>
+            </label>
+            <div class="bottom">
+                <span>View all setting... ... .</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+   
+    document.getElementById('togg-1').addEventListener('change', function() {
+        if (this.checked) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    });
+</script>
+</body>
+</html>

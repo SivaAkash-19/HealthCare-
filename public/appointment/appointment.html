@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Appointment</title>
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Appointment</h1>
+        </header>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="hospital">Select Hospital:</label>
+                <select id="hospital" name="hospital" required>
+                   
+                    <option value="Colombo District: Asiri Central Hospital">Colombo District: Asiri Central Hospital</option>
+                    <option value="Gampaha District: Hemas Hospital, Wattala">Gampaha District: Hemas Hospital, Wattala</option>
+                    <option value="Kalutara District: Asiri Hospital, Kalutara">Kalutara District: Asiri Hospital, Kalutara</option>
+                    <option value="Kandy District: Kandy General Hospital">Kandy District: Kandy General Hospital</option>
+                    <option value="Matale District: Suwasewana Hospital">Matale District: Suwasewana Hospital</option>
+                    <option value="Nuwara Eliya District: Lanka Hospitals, Nuwara Eliya">Nuwara Eliya District: Lanka Hospitals, Nuwara Eliya</option>
+                    <option value="Galle District: Hemas Southern Hospital">Galle District: Hemas Southern Hospital</option>
+                    <option value="Matara District: Medi House Hospital">Matara District: Medi House Hospital</option>
+                    <option value="Hambantota District: Suwanetha Eye Hospital">Hambantota District: Suwanetha Eye Hospital</option>
+                    <option value="Jaffna District: Jaffna Private Hospital">Jaffna District: Jaffna Private Hospital</option>
+                    <option value="Kilinochchi District: Kilinochchi General Hospital (Private wing)">Kilinochchi District: Kilinochchi General Hospital (Private wing)</option>
+                    <option value="Mannar District: Mannar Private Medical Centre">Mannar District: Mannar Private Medical Centre</option>
+                    <option value="Vavuniya District: Vavuniya Private Hospital">Vavuniya District: Vavuniya Private Hospital</option>
+                    <option value="Mullaitivu District: Mullaitivu General Hospital (Private wing)">Mullaitivu District: Mullaitivu General Hospital (Private wing)</option>
+                    <option value="Batticaloa District: Batticaloa Private Hospital">Batticaloa District: Batticaloa Private Hospital</option>
+                    <option value="Ampara District: Ampara Private Hospital">Ampara District: Ampara Private Hospital</option>
+
+                    <option value="Trincomalee District: Trincomalee Private Hospital">Trincomalee District: Trincomalee Private Hospital</option>
+                    <option value="Kurunegala District: Ceymed Healthcare Services">Kurunegala District: Ceymed Healthcare Services</option>
+                   
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specialist">Select Specialist:</label>
+                <select id="specialist" name="specialist" required>
+                   
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Dermatologist">Dermatologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Pulmonologist">Neurologist</option>
+                    <option value="General Practitioner (GP) / Family Medicine">General Practitioner (GP) / Family Medicine</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+                    <option value="Oncologist">Oncologist</option>
+                    <option value="Gynecologist / Obstetrician (OB/GYN)">Gynecologist / Obstetrician (OB/GYN)</option>
+                    <option value="Psychiatrist">Psychiatrist</option>
+                    <option value="Gastroenterologist">Gastroenterologist</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Select Appointment Time:</label>
+                <select id="appointmentTime" name="appointmentTime" required>
+                    <!-- Available appointment times -->
+                    <option value="2024-07-01T09:00">July 1, 2024 - 09:00 AM</option>
+                    <option value="2024-07-01T10:00">July 1, 2024 - 10:00 AM</option>
+                    <option value="2024-07-01T11:00">July 1, 2024 - 11:00 AM</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="charge">Doctor's Charge:</label>
+                <input type="text" id="charge" name="charge" value="$100" readonly>
+            </div>
+            <div class="form-group">
+                <label for="phone">Your Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="button" onclick="makeAppointment()">Make Appointment</button>
+        </form>
+    </div>
+
+    <div id="confirmationPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Appointment Confirmed!</p>
+            <p>Our team will contact you for further information.</p>
+        </div>
+    </div>
+
+    <script src="appointment.js"></script>
+</body>
+</html>

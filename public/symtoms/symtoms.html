@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms Checker</title>
+    <link rel="stylesheet" href="symtoms.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Symptoms Checker</h1>
+        </header>
+        <form id="symptomsForm">
+            <div class="form-group">
+                <label for="symptoms">Enter Your Symptoms:</label>
+                <textarea id="symptoms" name="symptoms" rows="4" required></textarea>
+            </div>
+            <button type="button" onclick="checkSymptoms()">Check Illness</button>
+            <button type="button" onclick="showSymptomInfo()">Show Symptom Information</button>
+            <button type="button" onclick="showSymptomNames()">Show Symptom Names</button>
+        </form>
+        <div id="result" class="result"></div>
+        <div id="symptomInfo" class="symptom-info"></div>
+        <div id="symptomNames" class="symptom-names"></div>
+    </div>
+
+    <script src="symtoms.js"></script>
+</body>
+</html>

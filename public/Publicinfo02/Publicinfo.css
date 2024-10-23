@@ -1,0 +1,96 @@
+
+.heading
+{
+    margin-top: 6%;
+}
+.Inform
+{
+   
+   text-align: center;
+
+   margin: -1% auto;
+   padding: 10px 30px 50px;
+}
+.Inform .input
+{
+    margin-top: 1.5%;
+}
+.Inform [type="text"]
+{
+
+width: 20%;
+height: 20px;
+}
+.Inform [type="email"]
+{
+    width: 20%;
+    height: 20px;
+}
+.Inform [type="number"]
+{
+    width: 20%;
+    height: 20px;
+}
+.Inform [type="checkbox"]
+{
+width: 2%;
+margin-top: 2%;
+}
+
+h2
+{
+    text-align: center;
+}
+h4
+{
+    text-align: center;
+}
+.Inform .textlable
+{
+  display: block;
+  margin-right: 15%;
+  align-items: center;
+}
+
+.btn button
+{
+    
+    width: 10%;
+    
+    color: #E6D7FD;
+    cursor: pointer;
+    background-color: #140330;
+    margin-top: 2%;
+    
+   
+    border-radius: 2%;
+   
+}
+
+.btn :hover
+{
+    color: #140330;
+    background-color:#E6D7FD ;
+}
+
+.backbtn button
+{
+width: 1.7%;
+height: .3%;
+background-color:#E6D7FD;
+border: none;
+border:20px ;
+}
+.backbtn button:hover
+{
+    color:#E6D7FD ;
+    background-color:#CCAFFB ;
+}
+
+.logo h3
+{
+    align-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 46%;
+    
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Medicine</title>
+    <link rel="stylesheet" href="delivery.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Order Medicine</h1>
+        </header>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="pharmacy">Enter Pharmacy:</label>
+                <input type="text" id="pharmacy" name="pharmacy">
+                <button type="button" onclick="showNearbyPharmacies()">Show Nearby Pharmacies</button>
+            </div>
+            <div id="map" class="map"></div>
+            <div class="form-group">
+                <label for="medicine">Enter Medicine:</label>
+                <input type="text" id="medicine" name="medicine">
+            </div>
+            <div class="form-group">
+                <label for="prescription">Add Prescription:</label>
+                <input type="file" id="prescription" name="prescription">
+            </div>
+            <div class="form-group">
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="charge">Delivery Charge per km:</label>
+                <input type="text" id="charge" name="charge" value="200Lkr" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="timeLimit">Delivery Time Limit (in hours):</label>
+                <input type="number" id="timeLimit" name="timeLimit" min="1" max="24">
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method:</label>
+                <input type="text" id="paymentMethod" name="paymentMethod" value="Cash on Delivery" readonly>
+            </div>
+            <button type="button" onclick="calculateDistanceAndCharge()">Calculate Charge</button>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+    <script src="delivery.js"></script>
+</body>
+</html>

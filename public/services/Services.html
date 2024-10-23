@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmergiCare - Our Services</title>
+    <link rel="stylesheet" href="Services.css">
+</head>
+<body>
+    <div class="head">
+    <h1>OUR <br> SERVICES</h1>
+</div>
+    <div class="container">
+        <header>
+
+        </header>
+        <div class="services">
+            <div class="ambulance" id="ambulance">
+                <img src="./imagepng/ambulance01.png"alt="Ambulance">
+                <h2>AMBULANCE</h2>
+            </div>
+            <div class="service" id="appointment">
+                <img src="./imagepng/booking.png" alt="Booking Appointment">
+                <h2>BOOKING APPOINTMENT</h2>
+            </div>
+            <div class="service" id="delivery">
+                <img src="./imagepng/delivery.png" alt="Medicine Delivery">
+                <h2>MEDICINE DELIVERY</h2>
+            </div>
+            <div class="service" id="remotedoctor">
+                <img src="./imagepng/remote-doctor.png" alt="Remote Doctor">
+                <h2>REMOTE DOCTOR</h2>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        <h1>EMERGI CARE</h1>
+    </footer>
+
+<script>
+    document.getElementById('ambulance').addEventListener('click', function() {
+            window.location.href = '../ambulance/ambulance.html';
+        });
+
+        document.getElementById('appointment').addEventListener('click', function() {
+            window.location.href = '../appointment/appointment.html';
+        });
+
+        document.getElementById('delivery').addEventListener('click', function() {
+            window.location.href = '../delivery/delivery.html';
+        });
+
+        document.getElementById('remotedoctor').addEventListener('click', function() {
+            window.location.href = '../remotedoctor/remotedoctor.html';
+        });
+</script>
+</body>
+</html>

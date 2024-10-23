@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffffff, #90caf9);
+            color: white;
+        }
+        .container {
+            display: flex;
+            text-align: center;
+        }
+        .pframe {
+            margin-top: 80px;
+            display: flex;
+        }
+        form {
+            display: flex;
+            flex-direction: column; 
+            background-color: #38475a;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .logo img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 10%;
+            height: auto;
+        }
+        .settings {
+            display: flex;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .doctor img {
+            width: 880px;
+            height: 610px;
+            margin-top: 3.5%;
+        }
+        .settings div {
+            margin: 5px;
+            font-size: 40px;
+        }
+        label {
+            font-weight: 600;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: black;
+            display: flex;
+            font-style: bold;
+        }
+        .subform {
+            background-color: rgb(255, 255, 255);
+            margin-top: 30px;
+            margin-left: 80px;
+            width: 325px;
+        }
+        #tframe {
+            margin-right: 80px;
+            border-radius: 600px;
+            background-color: black; 
+            height: 550px;
+            width: 550px;
+        }
+        .btn:hover {
+            background-color: white;
+            color: black;
+        }
+        .sign a:hover {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../coverimg/logo.png" alt="Logo">
+        </div>
+        <div class="settings">
+            <div>⚙</div>
+            <div>🔲</div>
+            <div>👤</div>
+        </div>
+        <div class="pframe">
+            <div class="doctor">
+                <img src="./doctor.png" alt="Doctor">
+            </div>
+            <div id="tframe">
+                <h1>Login Here</h1>
+                <form class="subform" id="loginForm">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="btn">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="sign">
+                        <a id="registerLink">Sign Up</a>
+                    </div>
+                    <div class="sign">
+                
+                        <a id="forgotPasswordLink">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "Login successful") {
+                    alert('Login successful! Redirecting to home page...');
+                    window.location.href = '../home/home.html';
+                } else {
+                    alert('Login failed: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error during login:', error);
+                alert('An error occurred during login.');
+            });
+        });
+
+        document.getElementById('registerLink').addEventListener('click', function() {
+            window.location.href = './signup.html';
+        });
+
+        document.getElementById('forgotPasswordLink').addEventListener('click', function() {
+        window.location.href = './forgot-password.html';
+    });
+    </script>
+</body>
+</html>

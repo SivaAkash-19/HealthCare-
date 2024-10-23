@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            margin: 10px 0;
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        select{
+         width: 100%; ;
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            color: black;
+            text-decoration: none;
+        }
+        label {
+            margin-top: 2px;
+            text-align: left;
+        }
+        .log {
+            vertical-align: baseline;
+        }
+        .log a {
+            color: blue;
+            cursor: pointer;
+        }
+        .log a:hover {
+            color: black;
+        }
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-arrow" onclick="goBack()">←</div>
+        <h1>Create new Account</h1>
+        <div class="log">
+            <span>Already Registered? <a id="loginLink">Login</a></span><br>
+        </div>
+        <form id="signupForm" action="/post" method="post">
+            <label>FULL NAME</label>
+            <input type="text" id="fullName" placeholder="Jiara Martins" name="fname" required>
+            <label>EMAIL</label>
+            <input type="email" id="email" placeholder="hello@reallygratste.com" name="email" required>
+            <label>PASSWORD</label>
+            <input type="password" id="password" placeholder="*******" name="password" required>
+            <label>DATE OF BIRTH</label>
+            <input type="date" id="dateOfBirth" name="dob" required>
+            
+                <select name="securityQuestion" required>
+                    <option value="What is your pet's name?">What is your pet's name?</option>
+                    <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+                    <option value="What is your favorite color?">What is your favorite color?</option>
+                </select>
+                <input type="text" name="securityAnswer" placeholder="Answer" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const json = {};
+            formData.forEach((value, key) => {
+                json[key] = value;
+            });
+            try {
+                const response = await fetch('/post', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(json)
+                });
+
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    alert(data.message); 
+                    window.location.href = '../home/home.html';
+                } else {
+                    const errorData = await response.json();
+                    alert(`Error: ${errorData.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Form submission failed');
+            }
+        });
+
+        document.getElementById('loginLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = './login.html'; 
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    
+    
+</body>
+</html>

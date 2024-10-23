@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #F0F0F0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: -40%;
+    margin-right: 50%;
+    border-top: 2px solid #291717; 
+    border-bottom: 2px solid #1f1846;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.head h1 {
+    font-size: 3em;
+    margin: 0;
+    margin-top: -90%;
+    margin-bottom: 80%;
+    margin-left: -130%;
+  
+}
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.service {
+    text-align: center;
+    flex: 1;
+}
+
+.service img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.ambulance img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.service h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+.ambulance h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+
+footer {
+    margin-top: 30%;
+    margin-left: -130%;
+    margin-right: 30%;
+}
+
+footer h1 {
+    font-size: 2em;
+   
+}

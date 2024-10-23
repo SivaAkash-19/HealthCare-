@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Medicine</title>
+  <link rel="stylesheet" href="precription.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Order Medicine</h1>
+        <form id="orderForm">
+            <label for="medicine">Medicine Name:</label>
+            <input type="text" id="medicine" name="medicine" required>
+            <br>
+            <label for="dosage">Dosage:</label>
+            <input type="text" id="dosage" name="dosage" required>
+            <br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <br>
+            <label for="prescription">Do you have a prescription? (Yes/No)</label>
+            <br>
+            <input type="radio" id="prescription_yes" name="prescription" value="yes"> Yes
+            <input type="radio" id="prescription_no" name="prescription" value="no"> No
+            <br>
+            <br>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/submit-order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert('Order submitted successfully!');
+            } else {
+                alert(`Error: ${result.message}`);
+            }
+        });
+    </script>
+</body>
+</html>
